@@ -1,24 +1,26 @@
-import React from 'react';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const activeStyle = {
+    color: '#ccc',
+}
 
 export default function Header(){
     return(
-        <header className="App-header">
-          <a
-            className="btn"
-            href="./"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            HOME
-          </a>
-          <a
-            className="btn"
-            href="./admin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ADMIN
-          </a>
+        <header className="header">
+            <NavLink
+                className="btn"
+                to='./'
+                activeStyle={activeStyle}>
+                HOME
+            </NavLink>
+        
+            <NavLink 
+                to='/admin' 
+                className='btn' 
+                activeStyle={activeStyle}>
+                ADMIN
+            </NavLink>
         </header>
     )
 }
