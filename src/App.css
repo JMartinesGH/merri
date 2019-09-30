@@ -1,22 +1,105 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  background: rgb(122,188,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 36px 18px 0;
+}
+
+article{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
 }
 
-.App-link {
-  color: #09d3ac;
+article div{
+  margin: 0 0 20px;
+}
+
+.btn{
+  background: rgba(50, 48, 153, 0.4);
+  border-radius: 24px;
+  padding: 8px 11px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn:hover{
+  background: rgba(222, 222, 222, 0.6);
+}
+
+.coming-soon{
+  font-family: BrownStd;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4E99AA;
+}
+
+article form{
+  padding: 12px 5px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+}
+
+article input{
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 0 10px 10px;
+  font-size: 16px;
+  line-height: 19px;
+  flex: 2;
+}
+
+.submit{
+  font-size: 16px;
+  line-height: 19px;
+  background: rgba(50, 48, 153, 0.4);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  flex: 1;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 720px){
+
+  header{
+    padding: 60px 38px 0;
+  }
+
+  article form{
+    width: calc(408px - 24px);
+  }
+}
+
+@media screen and (min-width: 1440px){
+
+
+  header{
+    padding: 60px 10% 0;
+  }
+
+  .submit{
+    font-size: 18px;
+    line-height: 22px;
+    padding: 6px;
+  }
 }
